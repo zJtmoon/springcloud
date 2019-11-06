@@ -1,6 +1,7 @@
 package com.example.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -14,6 +15,7 @@ import javax.annotation.Resource;
  */
 @RestController
 public class orderController {
+
     @Resource
     private RestTemplate restTemplate;
     /**
@@ -29,7 +31,7 @@ public class orderController {
 //       String result= restTemplate.getForObject("http://127.0.0.1:8081/getMember",String.class);
 
         String result= restTemplate.getForObject(url,String.class);
-        System.out.println("订单服务调用会员服务的result："+result);
+        System.out.println("订单服务调用会员服务的result："+result+"------");
          return result;
     }
 }
