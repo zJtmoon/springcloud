@@ -32,7 +32,6 @@ public class orderController {
 
         String result= restTemplate.getForObject(url,String.class);
         System.out.println("订单服务调用会员服务的result："+result+"------");
-        System.out.println("======");
          return result;
     }
 }
