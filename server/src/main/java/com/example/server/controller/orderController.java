@@ -18,7 +18,6 @@ public class orderController {
 
     @Resource
     private RestTemplate restTemplate;
-
     /**
      * 在springcloud。有两种方式http   1.rest是有springboot提供的采用httpclient技术 2.fegin它是springcloud的
      *
