@@ -18,20 +18,22 @@ public class orderController {
 
     @Resource
     private RestTemplate restTemplate;
+
     /**
      * 在springcloud。有两种方式http   1.rest是有springboot提供的采用httpclient技术 2.fegin它是springcloud的
+     *
      * @return
      */
     //订单服务调用会员服务
     @RequestMapping("/getOrder")
-    public String getOrder(){
+    public String getOrder() {
         //使用别名去注册中心上获取对应的服务调用地址
-        String url="http://hello-springcloud/getMember";
+        String url = "http://hello-springcloud/getMember";
 //        //这样其实不对
 //       String result= restTemplate.getForObject("http://127.0.0.1:8081/getMember",String.class);
 
-        String result= restTemplate.getForObject(url,String.class);
-        System.out.println("订单服务调用会员服务的result："+result+"------");
-         return result;
+        String result = restTemplate.getForObject(url, String.class);
+        System.out.println("订单服务调用会员服务的result：" + result + "------");
+        return result;
     }
 }
