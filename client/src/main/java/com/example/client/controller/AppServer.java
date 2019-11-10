@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppServer {
     @Value("${server.port}")
-    private String port;
-
+    private  String port;
     @RequestMapping("/getMember")
-    public String getMember() {
-        return "this is member,我是会员服务  port" + port;
+    public  String getMember(){
+        return "this is member,我是会员服务  port"+port ;
     }
 }
