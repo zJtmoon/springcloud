@@ -15,6 +15,7 @@ public class AppServer {
     private  String port;
     @RequestMapping("/getMember")
     public  String getMember(){
+
         return "this is member,我是会员服务  port"+port ;
     }
 }
